@@ -1,6 +1,3 @@
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/DaNautilus/create-node-library.svg)](https://greenkeeper.io/)
-
 <h1 align="center">Create Node Library</h1>
 
 <p align="center">
@@ -12,6 +9,9 @@
   </a>
     <a href="https://ci.appveyor.com/project/DaNautilus/database-metrics-logger/branch/master">
     <img src="https://ci.appveyor.com/api/projects/status/boscpdij2106sycw?svg=true&passingText=windows%20passing&pendingText=windows%20pending&failingText=windows%20failing" alt="appveyor" />
+  </a>
+    <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/DaNautilus/create-node-library.svg" alt="greenkeeper" />
   </a>
 </p>
 
