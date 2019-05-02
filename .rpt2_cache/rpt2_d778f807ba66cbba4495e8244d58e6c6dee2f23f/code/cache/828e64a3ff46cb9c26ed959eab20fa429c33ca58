@@ -1,1 +1,0 @@
-{"code":"export * from './create-project';\r\n","references":["/Users/bobby/Documents/private/create-node-library/src/project/create-project.ts"],"dts":{"name":"/Users/bobby/Documents/private/create-node-library/.tmp/project/index.d.ts","writeByteOrderMark":false,"text":"export * from './create-project';\r\n"}}
