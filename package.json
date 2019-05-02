@@ -1,0 +1,90 @@
+{
+  "name": "create-node-library",
+  "version": "0.0.0",
+  "description": "node library bootstrap cli",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist",
+    "templates",
+    "bin"
+  ],
+  "bin": {
+    "create-node-library": "bin/create-node-library"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "set NODE_ENV=test&& jest --env=jsdom --coverage",
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "prebuild": "npm run lint && rimraf dist && rimraf .tmp",
+    "postbuild": "npm run bundle && rimraf .tmp",
+    "bundle": "dts-bundle --name dist/index --main .tmp --outputAsModuleFolder",
+    "sonarconfig": "rimraf sonar-project.properties && node ./scripts/sonar-config.js"
+  },
+  "keywords": [
+    "create",
+    "node",
+    "library",
+    "cli",
+    "boilerplate"
+  ],
+  "engines": {
+    "node": ">=8.15.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/(node_modules|dist|templates)"
+    ],
+    "coverageDirectory": "<rootDir>/test/coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{t,j}s?(x)",
+      "!src/**/index.ts",
+      "!src/**/*.d.ts"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ]
+  },
+  "contributors": [
+    {
+      "name": "Robert Kleger",
+      "email": "robert.kleger@bobb.io"
+    }
+  ],
+  "repository": "git+ssh://git@github.com:DaNautilus/create-node-library.git",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "dts-bundle": "^0.7.3",
+    "jest": "^24.7.1",
+    "jest-environment-node": "^24.7.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-typescript2": "^0.21.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "arg": "^4.1.0",
+    "chalk": "^2.4.2",
+    "esm": "^3.2.22",
+    "execa": "^1.0.0",
+    "inquirer": "^6.3.1",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"code":"export var isObject = function (value) { return (value && typeof value === 'object' && !Array.isArray(value)); };\r\n","references":[],"dts":{"name":"/Users/bobby/Documents/private/create-node-library/.tmp/helpers/is-object.d.ts","writeByteOrderMark":false,"text":"export declare const isObject: (value: {}) => boolean;\r\n"}}
