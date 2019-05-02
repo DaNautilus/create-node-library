@@ -1,3 +1,6 @@
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/DaNautilus/create-node-library.svg)](https://greenkeeper.io/)
+
 <h1 align="center">Create Node Library</h1>
 
 <p align="center">
