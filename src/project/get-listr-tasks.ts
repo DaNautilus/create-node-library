@@ -1,5 +1,6 @@
 import { projectInstall } from 'pkg-install';
 
+import { compileTemplates } from './compile-templates';
 import { copyTemplateFiles } from './copy-template-files';
 import { initGit } from './init-git';
 
@@ -7,6 +8,10 @@ export const getListrTasks = (options, directoryOptions) => ([
   {
     title: 'Copy project files',
     task: () => copyTemplateFiles(directoryOptions),
+  },
+  {
+    title: 'Compile project files',
+    task: () => compileTemplates(options, directoryOptions),
   },
   {
     title: 'Initialize git',

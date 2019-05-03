@@ -1,7 +1,7 @@
 {
-  "name": "node-project",
+  "name": "{{projectName}}",
   "version": "0.0.0",
-  "description": "node project",
+  "description": "{{description}}",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -44,7 +44,7 @@
     ]
   },
   "sonar": {
-    "projectKey": "DaNautilus_database-metrics-logger",
+    "projectKey": "",
     "sources": "src",
     "reportPaths": "test/coverage/lcov.info"
   },
