@@ -3,7 +3,6 @@ import inquirer from 'inquirer';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getDefaultOptions } from './get-default-options';
 import { getInquirerQuestions } from './get-inquirer-questions';
-import { options } from './options';
 
 export const promptForMissingOptions = async providedOptions => {
   if (providedOptions.skipPrompts) {
@@ -13,5 +12,5 @@ export const promptForMissingOptions = async providedOptions => {
   const questions = getInquirerQuestions(providedOptions);
   const answers = await inquirer.prompt(questions);
 
-  return mergeDeep({}, options, answers);
+  return mergeDeep({}, providedOptions, answers);
 };
