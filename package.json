@@ -56,6 +56,11 @@
       "tsx"
     ]
   },
+  "sonar": {
+    "projectKey": "DaNautilus_create-node-library",
+    "sources": "src",
+    "reportPaths": "test/coverage/lcov.info"
+  },
   "contributors": [
     {
       "name": "Robert Kleger",
