@@ -6,7 +6,7 @@ import { getInquirerQuestions } from './get-inquirer-questions';
 
 export const promptForMissingOptions = async providedOptions => {
   if (providedOptions.skipPrompts) {
-    return mergeDeep({}, getDefaultOptions(), providedOptions);
+    return mergeDeep({}, providedOptions, getDefaultOptions());
   }
 
   const questions = getInquirerQuestions(providedOptions);
