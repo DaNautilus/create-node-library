@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3] - 2019-05-09
+
+### Fixed
+
+- CLI project name argument.
+- CLI skip prompts argument.
+
 ## [0.0.2] - 2019-05-03
 
 ### Added
