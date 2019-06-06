@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.4] - 2019-06-06
+
+### General
+
+- Upgrade jest dependencies.
+- Upgrade rollup dependencies.
+- Upgrade typescript to version 3.5.1.
+- Removed package-lock.json.
+
 ## [0.0.3] - 2019-05-09
 
 ### Fixed
